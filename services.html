@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services - Mr. All Clean</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <link rel="stylesheet" href="animations.css">
+  <link rel="icon" href="img/mr_clean_logo.png" type="image/png">
+</head>
+
+<body class="page-transition">
+  <!-- Header/Navbar -->
+  <header class="header">
+    <div class="container">
+      <div class="navbar">
+        <div class="logo">
+          <a href="index.html">
+            <img src="img/mr_clean_logo.png" alt="Mr. All Clean Logo" class="logo-img">
+            <span class="logo-text"><span class="blue-text">Mr.</span> All Clean</span>
+          </a>
+        </div>
+
+        <nav class="nav-menu">
+          <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html" class="active">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <div class="search-container">
+            <button class="search-toggle" id="searchToggle">
+              <i class="fas fa-search"></i>
+            </button>
+            <div class="search-box" id="searchBox">
+              <input type="search" placeholder="Search services..." id="searchInput">
+              <button class="search-close" id="searchClose">
+                <i class="fas fa-times"></i>
+              </button>
+              <div class="search-results" id="searchResults"></div>
+            </div>
+          </div>
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-sun light-icon"></i>
+            <i class="fas fa-moon dark-icon"></i>
+          </button>
+          <a href="contact.html" class="btn btn-primary btn-ripple">Book Now</a>
+          <button class="mobile-menu-toggle" id="mobileMenuToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-container">
+      <div class="mobile-search">
+        <input type="search" placeholder="Search services..." id="mobileSearchInput">
+        <div class="mobile-search-results" id="mobileSearchResults"></div>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="services.html" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-primary mobile-btn btn-ripple">Book Now</a>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <h1 class="animate__animated animate__fadeInDown">Our Services</h1>
+      <p class="animate__animated animate__fadeInUp">We offer a comprehensive range of laundry and dry cleaning services
+        to meet all your needs.</p>
+    </div>
+  </div>
+
+  <!-- Main Services -->
+  <section class="main-services">
+    <div class="container">
+      <div class="services-cards stagger-fade-in">
+        <div class="service-detail-card hover-lift" id="wash-fold" data-aos="fade-up" data-aos-delay="100">
+          <div class="service-detail-header">
+            <h2>Wash & Fold</h2>
+            <p>Our most popular service for everyday laundry needs</p>
+          </div>
+          <div class="service-detail-content">
+            <p class="service-price">₹ 80/kg</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Sorted by color and fabric type</li>
+              <li><i class="fas fa-check"></i> Washed with premium detergent</li>
+              <li><i class="fas fa-check"></i> Folded and packaged neatly</li>
+              <!-- <li><i class="fas fa-check"></i> 24-48 hour turnaround</li> -->
+              <li><i class="fas fa-check"></i> Free pickup </li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-full btn-ripple">Book Now</a>
+          </div>
+        </div>
+
+        <div class="service-detail-card hover-lift" id="dry-cleaning" data-aos="fade-up" data-aos-delay="200">
+          <div class="service-detail-header">
+            <h2>Wash And Iron</h2>
+            <p>Professional care for your delicate and special garments</p>
+          </div>
+          <div class="service-detail-content">
+            <p class="service-price">₹ 110/kg</p>
+            <ul class="service-features">
+              <!-- <li><i class="fas fa-check"></i> Suits, dresses, and formal wear</li> -->
+              <li><i class="fas fa-check"></i> Stain treatment included</li>
+              <li><i class="fas fa-check"></i> Pressed and hung with care</li>
+              <li><i class="fas fa-check"></i> Eco-friendly cleaning agents</li>
+              <li><i class="fas fa-check"></i> 48-72 hour turnaround</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-full btn-ripple">Book Now</a>
+          </div>
+        </div>
+
+        <div class="service-detail-card hover-lift" id="specialty-items" data-aos="fade-up" data-aos-delay="300">
+          <div class="service-detail-header">
+            <h2>Vacuum Iron</h2>
+            <p>Expert handling for your unique and valuable items</p>
+          </div>
+          <div class="service-detail-content">
+            <p class="service-price">₹ 15/piece</p>
+            <ul class="service-features">
+              <!-- <li><i class="fas fa-check"></i> Wedding dresses and formal gowns</li> -->
+              <li><i class="fas fa-check"></i> Comforters and bedding</li>
+              <li><i class="fas fa-check"></i> Leather and suede items</li>
+              <li><i class="fas fa-check"></i> Alterations available</li>
+              <li><i class="fas fa-check"></i> Consultation included</li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary btn-full btn-ripple">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing Section -->
+  <section class="pricing-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <h2>Our Pricing</h2>
+        <p>Transparent pricing for all your laundry and dry cleaning needs</p>
+      </div>
+
+      <div class="pricing-tabs" data-aos="fade-up">
+        <button class="pricing-tab active" data-tab="laundry"> Mens Laundry Services</button>
+        <button class="pricing-tab" data-tab="dry-cleaning">Women Laundry Services</button>
+        <button class="pricing-tab" data-tab="specialty">Home Laundry Services</button>
+        <button class="pricing-tab" data-tab="kids">Kids Laundry Services</button>
+      </div>
+
+      <div class="pricing-content">
+        <!-- menswear Laundry Pricing -->
+        <div class="pricing-table active" id="laundry-pricing" data-aos="fade-up">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Dry Cleaning (in rupees)</th>
+                <th>Steam Ironing (in rupees)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Waist Coat </td>
+                <td>₹ 150 </td>
+                <td>₹ 77</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Kurta Payjama (Light) </td>
+                <td>₹ 200</td>
+                <td>₹ 98</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-2s">
+                <td>Kurta Payjama (Heavy) </td>
+                <td>₹ 350</td>
+                <td>₹ 176</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-3s">
+                <td>Coat-Short </td>
+                <td>₹ 300</td>
+                <td>₹ 150</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-4s">
+                <td>Jacket-Short </td>
+                <td>₹ 250</td>
+                <td>₹ 130</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-5s">
+                <td>Overcoat </td>
+                <td>₹ 360</td>
+                <td>₹ 178</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Safari Shirt & Pant-Cotton </td>
+                <td>₹ 250</td>
+                <td>₹ 130</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Shirt </td>
+                <td>₹ 110</td>
+                <td>₹ 56</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-2s">
+                <td>Shoes kids </td>
+                <td>₹ 180</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-3s">
+                <td>Shoes (Adult Pair) </td>
+                <td>₹ 350</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-4s">
+                <td>Shorts </td>
+                <td>₹ 70</td>
+                <td>₹ 37</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-5s">
+                <td>Socks Pair </td>
+                <td>₹ 50</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Suit 2 Pc </td>
+                <td>₹ 360</td>
+                <td>₹ 180</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Suit 3 Pc </td>
+                <td>₹ 450</td>
+                <td>₹ 227</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-2s">
+                <td>Sweater/Cardigan - Full Sleeve </td>
+                <td>₹ 200</td>
+                <td>₹ 100</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-3s">
+                <td>Sweater/Cardigan-Sleeveless </td>
+                <td>₹ 170</td>
+                <td>₹ 86</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-4s">
+                <td>Shawl/Lohi </td>
+                <td>₹ 200</td>
+                <td>₹ 100</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-5s">
+                <td>Tie </td>
+                <td>₹ 70</td>
+                <td>₹ 34</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Pants/Trousers </td>
+                <td>₹ 130</td>
+                <td>₹ 64</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Jeans </td>
+                <td>₹ 140</td>
+                <td>₹ 74</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-2s">
+                <td>T-Shirt </td>
+                <td>₹ 110</td>
+                <td>₹ 57</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-3s">
+                <td>Dhoti/Lungi (Silk) </td>
+                <td>₹ 120</td>
+                <td>₹ 60</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-4s">
+                <td>Shirt & Dhoti (Silk) </td>
+                <td>₹ 180</td>
+                <td>₹ 90</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-5s">
+                <td>Undergarment </td>
+                <td>₹ 50</td>
+                <td>₹ 27</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Women  Pricing -->
+        <div class="pricing-table" id="dry-cleaning-pricing" data-aos="fade-up">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Dry Cleaning (in rupees)</th>
+                <th>Steam Ironing (in rupees)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Blouse/Top </td>
+                <td>₹ 100 </td>
+                <td>₹ 50</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Choli + Lehanga + Dupatta </td>
+                <td>₹ 700</td>
+                <td>₹ 350</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-2s">
+                <td>Dress (Cotton) </td>
+                <td>₹ 220</td>
+                <td>₹ 110</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-3s">
+                <td>Dress (Heavy) </td>
+                <td>₹ 450</td>
+                <td>₹ 227</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-4s">
+                <td>Dupatta </td>
+                <td>₹ 100</td>
+                <td>₹ 50</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-5s">
+                <td>Kameez/Kurta </td>
+                <td>₹ 120</td>
+                <td>₹ 60</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Pyjama/Pants/Salwar/Churidar/Palazo Pants </td>
+                <td>₹ 100</td>
+                <td>₹ 50</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Kurta Pyjama/Salwar/Churidar </td>
+                <td>₹ 200</td>
+                <td>₹ 100</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-2s">
+                <td>Kurta Pyjamas/Salwar/Churidar + Dupatta </td>
+                <td>₹ 300</td>
+                <td>₹ 150/td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-3s">
+                <td>Lehanga/Flared Skirt </td>
+                <td>₹ 360</td>
+                <td>₹ 180</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-4s">
+                <td>Saree (Cotton/Synthetic/Light) </td>
+                <td>₹ 200</td>
+                <td>₹ 100</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-5s">
+                <td>Saree (Silk/Chiffon/Georgette/Pattu/Heavy) </td>
+                <td>₹ 300</td>
+                <td>₹ 150</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Saree (Embroidered/Heavy) </td>
+                <td>₹ 350</td>
+                <td>₹ 177</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Petti Coat </td>
+                <td>₹ 80</td>
+                <td>₹ 40</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-2s">
+                <td>Sherwani/Achkan </td>
+                <td>₹ 360</td>
+                <td>₹ 180</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-3s">
+                <td>Skirt-Pencil/Pleated/Other </td>
+                <td>₹ 120</td>
+                <td>₹ 60</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-4s">
+                <td>Stocking (Pair)-Regular </td>
+                <td>₹ 70</td>
+                <td>₹ 37</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-5s">
+                <td>Stole/Scarf </td>
+                <td>₹ 70</td>
+                <td>₹ 37</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Shorts </td>
+                <td>₹ 60</td>
+                <td>₹ 30</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+
+        <!-- home Services Pricing -->
+        <div class="pricing-table" id="specialty-pricing" data-aos="fade-up">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Dry Cleaning (in rupees)</th>
+                <th>Steam Ironing (in rupees)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Bath Mat </td>
+                <td>₹ 50 </td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Bath Robe Small </td>
+                <td>₹ 60</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-3s">
+                <td>Bath Robe Big </td>
+                <td>₹ 90</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-4s">
+                <td>Bath Towel </td>
+                <td>₹ 60</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-5s">
+                <td>Bed Cover Single </td>
+                <td>₹ 250</td>
+                <td>₹ 127</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Bed Cover Double/King </td>
+                <td>₹ 350</td>
+                <td>₹ 178</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Bed Sheet Single </td>
+                <td>₹ 120</td>
+                <td>₹ 60</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-2s">
+                <td>Bed Sheet Double/King </td>
+                <td>₹ 200</td>
+                <td>₹ 100</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-3s">
+                <td>Blanket Single </td>
+                <td>₹ 350</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-4s">
+                <td>Blanket Double/King </td>
+                <td>₹ 450</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-5s">
+                <td>Cushion Cover Small </td>
+                <td>₹ 70</td>
+                <td>₹ 37</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Cushion Cover Big-Ordinary </td>
+                <td>₹ 120</td>
+                <td>₹ 60</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Pillow Cover Cotton/Terry Cotton </td>
+                <td>₹ 50</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-2s">
+                <td>Pillow Cover-Embroidery </td>
+                <td>₹ 100</td>
+                <td>₹ 50</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Quilt Single </td>
+                <td>₹ 450 </td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Quilt Double/King </td>
+                <td>₹ 550</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-3s">
+                <td>Quilt Cover (Single) </td>
+                <td>₹ 250</td>
+                <td>₹ 127</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-4s">
+                <td>Quilt Cover (Double/King) </td>
+                <td>₹ 350</td>
+                <td>₹ 178</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-5s">
+                <td>Stuff Toy Small </td>
+                <td>₹ 120</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Stuff Toy Medium </td>
+                <td>₹ 200</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Stuff Toy Big </td>
+                <td>₹ 300</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-2s">
+                <td>Curtain-Without Lining (Per Panel) </td>
+                <td>₹ 340</td>
+                <td>₹ 120</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-3s">
+                <td>Curtain-With Lining (Per Panel )</td>
+                <td>₹ 350</td>
+                <td>₹ 178</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-4s">
+                <td>Face Towel </td>
+                <td>₹ 40</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-5s">
+                <td>Hand Towel </td>
+                <td>₹ 50</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Sofa Cover Per Seat </td>
+                <td>₹ 120</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Table Cloth Small </td>
+                <td>₹ 90</td>
+                <td>₹ 47</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-2s">
+                <td>Table Cloth Big </td>
+                <td>₹ 149</td>
+                <td>₹ 78</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Table Runner-Fancy </td>
+                <td>₹ 179</td>
+                <td>₹ 90</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Foot Mat (1ft 2ft) </td>
+                <td>₹ 60</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-3s">
+                <td>Pram </td>
+                <td>₹ 400</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-4s">
+                <td>Suit Case Small </td>
+                <td>₹ 250</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-5s">
+                <td>Suit Case Medium </td>
+                <td>₹ 400</td>
+                <td>₹ --</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Suit Case Big </td>
+                <td>₹ 500</td>
+                <td>₹ --</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- kids Services Pricing -->
+        <div class="pricing-table" id="specialty-pricing" data-aos="fade-up">
+          <table class="price-table">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Dry Cleaning (in rupees)</th>
+                <th>Steam Ironing (in rupees)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Blouse/Top </td>
+                <td>₹ 70 </td>
+                <td>₹ 34</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Choli + Lehanga + Dupatta </td>
+                <td>₹ 400</td>
+                <td>₹ 200</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-3s">
+                <td>Dress (Heavy) </td>
+                <td>₹ 250</td>
+                <td>₹ 127</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-4s">
+                <td>Skirt </td>
+                <td>₹ 90</td>
+                <td>₹ 46</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-5s">
+                <td>Frock </td>
+                <td>₹ 120</td>
+                <td>₹ 60</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn">
+                <td>Kurta Pants/Salwar/Churidar Dupatta </td>
+                <td>₹ 300</td>
+                <td>₹ 150</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Shorts </td>
+                <td>₹ 50</td>
+                <td>₹ 24</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-2s">
+                <td>T-Shirt </td>
+                <td>₹ 70</td>
+                <td>₹ 37</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-3s">
+                <td>Coat </td>
+                <td>₹ 180</td>
+                <td>₹ 90</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-4s">
+                <td>Jacket </td>
+                <td>₹ 150</td>
+                <td>₹ 77</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-5s">
+                <td>2 Pc Suit </td>
+                <td>₹ 340</td>
+                <td>₹ 120</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn">
+                <td>3 Pc Suit </td>
+                <td>₹ 300</td>
+                <td>₹ 150</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-1s">
+                <td>Sweater (Full Sleeves) </td>
+                <td>₹ 130</td>
+                <td>₹ 67</td>
+              </tr>
+              <tr class="animate__animated animate__fadeIn animate__delay-2s">
+                <td>Sweater (Sleeveless) </td>
+                <td>₹ 110</td>
+                <td>₹ 57</td>
+              </tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <section class="service-section" id="express-service">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Express Services</h2>
+      <div class="service-box" data-aos="fade-up">
+        <p class="service-description">Need your items cleaned quickly? Our express service ensures 24-hour turnaround
+          for most items.</p>
+        <div class="express-options">
+          <div class="express-option hover-lift" data-aos="fade-right">
+            <h3>Same-Day Service</h3>
+            <p>Drop off by 9 AM, pick up by 5 PM the same day.</p>
+            <p class="service-price">+50% surcharge</p>
+            <a href="contact.html" class="btn btn-primary btn-full btn-ripple">Book Now</a>
+          </div>
+          <div class="express-option hover-lift" data-aos="fade-left">
+            <h3>Next-Day Service</h3>
+            <p>Drop off by 5 PM, pick up by 5 PM the next day.</p>
+            <p class="service-price">+25% surcharge</p>
+            <a href="contact.html" class="btn btn-primary btn-full btn-ripple">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Pickup & Delivery -->
+  <section class="service-section" id="pickup-delivery">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Pickup & Delivery</h2>
+      <div class="service-box" data-aos="fade-up">
+        <p class="service-description">We offer convenient pickup and delivery services to save you time.</p>
+        <div class="express-options">
+          <div class="express-option hover-lift" data-aos="fade-right">
+            <h3> Delivery</h3>
+            <p>Free pickup and delivery at your convenience.</p>
+            <p class="service-price">Free each way</p>
+            <a href="contact.html" class="btn btn-primary btn-full btn-ripple">Schedule Now</a>
+          </div>
+          <div class="express-option hover-lift" data-aos="fade-left">
+            <h3>Standard Delivery</h3>
+            <p>Instant / Scheduled pickup and delivery.</p>
+            <p class="service-price">₹ 99</p>
+            <a href="contact.html" class="btn btn-primary btn-full btn-ripple">Book Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commercial Services -->
+  <section class="service-section" id="commercial">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Commercial Services</h2>
+      <div class="service-box commercial-box hover-lift shimmer" data-aos="zoom-in">
+        <p class="service-description">Specialized services for businesses including restaurants, hotels, and offices.
+        </p>
+        <a href="contact.html" class="btn btn-primary  btn-ripple">Contact For Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Specialty Services
+  <section class="specialty-services">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Specialty Services</h2>
+      <div class="specialty-grid stagger-fade-in">
+        <div class="specialty-card hover-lift" id="wedding-dress" data-aos="fade-up" data-aos-delay="100">
+          <h3>Wedding Dress Cleaning</h3>
+          <p>Specialized cleaning and preservation for wedding gowns.</p>
+          <p class="service-price">Starting at $199</p>
+          <button class="btn btn-primary btn-full btn-ripple">Learn More</button>
+        </div>
+        
+        <div class="specialty-card hover-lift" id="leather-suede" data-aos="fade-up" data-aos-delay="200">
+          <h3>Leather & Suede</h3>
+          <p>Professional cleaning for leather and suede garments.</p>
+          <p class="service-price">Starting at $49.99</p>
+          <button class="btn btn-primary btn-full btn-ripple">Learn More</button>
+        </div>
+        
+        <div class="specialty-card hover-lift" id="alterations" data-aos="fade-up" data-aos-delay="300">
+          <h3>Alterations</h3>
+          <p>Professional tailoring and alteration services.</p>
+          <p class="service-price">Custom pricing</p>
+          <button class="btn btn-primary btn-full btn-ripple">Learn More</button>
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Stain Removal -->
+  <section class="service-section" id="stain-removal">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Stain Removal</h2>
+      <div class="service-box commercial-box hover-lift" data-aos="zoom-in">
+        <p class="service-description">Our experts can remove even the toughest stains from your favorite garments.</p>
+        <a href="contact.html" class="btn btn-primary btn-full btn-ripple">Book Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Eco-Friendly Section -->
+  <section class="service-section" id="eco-friendly">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Eco-Friendly Cleaning</h2>
+      <div class="service-box commercial-box hover-lift" data-aos="zoom-in">
+        <p class="service-description">We use environmentally friendly cleaning methods and products to minimize our
+          ecological footprint.</p>
+          <a href="contact.html" class="btn btn-primary btn-full btn-ripple">Book Now</a>
+        </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
+      <div class="faq-grid stagger-fade-in">
+        <div class="faq-item hover-lift" data-aos="fade-up" data-aos-delay="100">
+          <h3>How do I schedule a pickup?</h3>
+          <p>You can schedule a pickup through our website or by calling our customer service line. We
+            offer flexible time slots to accommodate your schedule.</p>
+        </div>
+        <div class="faq-item hover-lift" data-aos="fade-up" data-aos-delay="200">
+          <h3>What is your turnaround time?</h3>
+          <p>Our standard turnaround time is 24-48 hours for Wash & Fold service and 48-72 hours for Dry Cleaning. We
+            also offer express service for an additional fee.</p>
+        </div>
+        <div class="faq-item hover-lift" data-aos="fade-up" data-aos-delay="300">
+          <h3>Do you offer same-day service?</h3>
+          <p>Yes, we offer same-day service for orders placed before 9 AM, with delivery by 7 PM. This service is
+            available for an additional fee and is subject to availability.</p>
+        </div>
+        <div class="faq-item hover-lift" data-aos="fade-up" data-aos-delay="400">
+          <h3>What areas do you serve?</h3>
+          <p>We currently serve the Ghaziabad area and surrounding suburbs within a 15-mile radius of our main
+            facility. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action Section -->
+  <section class="cta-section gradient-bg">
+    <div class="container">
+      <div class="cta-content" data-aos="zoom-in">
+        <h2>Ready to Experience Our Services?</h2>
+        <p>Join our satisfied customers and let us take care of your laundry and dry cleaning needs. First-time
+          customers get 15% off their first order!</p>
+        <div class="cta-buttons">
+          <a href="contact.html" class="btn btn-white btn-ripple pulse">Book Now</a>
+          <a href="contact.html" class="btn btn-outline-white btn-ripple">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+          <div class="footer-logo">
+            <a href="index.html">
+              <img src="img/mr_clean_logo.png" alt="Mr. All Clean Logo" class="logo-img-small">
+              <span class="logo-text"><span class="blue-text">Mr.</span> All Clean</span>
+            </a>
+          </div>
+          <p>Professional laundry and dry cleaning services for all your needs. Quality care for your garments since
+            2025.</p>
+          <div class="social-links">
+            <a href="#" class="hover-scale"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="hover-scale"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="hover-scale"><i class="fab fa-instagram"></i></a>
+            <!-- <a href="#" class="hover-scale"><i class="fab fa-linkedin-in"></i></a> -->
+          </div>
+        </div>
+
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="index.html" class="hover-scale">Home</a></li>
+            <li><a href="about.html" class="hover-scale">About Us</a></li>
+            <li><a href="services.html" class="hover-scale">Services</a></li>
+            <li><a href="contact.html" class="hover-scale">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+          <h3>Services</h3>
+          <ul class="footer-links">
+            <li><a href="#wash-fold" class="hover-scale">Wash & Fold</a></li>
+            <li><a href="#dry-cleaning" class="hover-scale">Dry Cleaning</a></li>
+            <li><a href="#specialty-items" class="hover-scale">Specialty Items</a></li>
+            <li><a href="#commercial" class="hover-scale">Commercial Services</a></li>
+            <li><a href="#pickup-delivery" class="hover-scale">Pickup & Delivery</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col" data-aos="fade-up" data-aos-delay="400">
+          <h3>Newsletter</h3>
+          <p>Subscribe to our newsletter for tips, news, and special offers.</p>
+          <div class="newsletter-form">
+            <input type="email" placeholder="Your email">
+            <button class="btn btn-primary btn-ripple"><i class="fas fa-envelope"></i></button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="currentYear"></span> Mr. All Clean. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#" class="hover-scale">Privacy Policy</a>
+          <a href="#" class="hover-scale">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top Button -->
+  <button class="scroll-to-top" id="scrollToTop">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: false,
+      mirror: true
+    });
+
+    // Scroll to top functionality
+    const scrollToTopButton = document.getElementById('scrollToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopButton.classList.add('visible');
+      } else {
+        scrollToTopButton.classList.remove('visible');
+      }
+    });
+
+    scrollToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+  <script>
+    // Direct tab switching implementation that won't be affected by other scripts
+    document.addEventListener('DOMContentLoaded', function () {
+      // Disable AOS on pricing tables to prevent conflicts
+      const pricingTables = document.querySelectorAll('.pricing-table');
+      pricingTables.forEach(table => {
+        table.removeAttribute('data-aos');
+      });
+
+      // Simple and direct tab switching
+      const pricingTabs = document.querySelectorAll('.pricing-tab');
+
+      pricingTabs.forEach(tab => {
+        tab.addEventListener('click', function () {
+          const tabId = this.getAttribute('data-tab');
+
+          // Remove active class from all tabs
+          pricingTabs.forEach(t => t.classList.remove('active'));
+
+          // Add active class to clicked tab
+          this.classList.add('active');
+
+          // Hide all pricing tables
+          pricingTables.forEach(table => {
+            table.classList.remove('active');
+            // Remove any animation classes that might interfere
+            table.classList.remove('animate__animated', 'animate__fadeIn');
+          });
+
+          // Show the corresponding pricing table
+          const activeTable = document.getElementById(`${tabId}-pricing`);
+          if (activeTable) {
+            activeTable.classList.add('active');
+            console.log(`Activated table: ${tabId}-pricing`);
+          }
+        });
+      });
+
+      // Ensure the default tab is active on page load
+      const defaultTab = document.querySelector('.pricing-tab.active');
+      if (defaultTab) {
+        const defaultTabId = defaultTab.getAttribute('data-tab');
+        const defaultTable = document.getElementById(`${defaultTabId}-pricing`);
+        if (defaultTable) {
+          defaultTable.classList.add('active');
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
